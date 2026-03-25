@@ -133,29 +133,18 @@ export default function Navbar() {
       >
         <nav className={styles.mobileNav}>
           <a href="#why" onClick={() => setMenuOpen(false)}>
-            Why Us
+            Join a Community
           </a>
           <a href="#join" onClick={() => setMenuOpen(false)}>
-            Community
+            Resources
           </a>
           <a href="#download" onClick={() => setMenuOpen(false)}>
-            Resources
+            Submit Documents
           </a>
           <a href="#review" onClick={() => setMenuOpen(false)}>
             Submit
           </a>
         </nav>
-        <div className={styles.mobileIcons}>
-          <button className={styles.iconBtn} aria-label="Search">
-            <SearchIcon />
-          </button>
-          <button className={styles.iconBtn} aria-label="Notifications">
-            <BellIcon />
-          </button>
-          <button className={styles.iconBtn} aria-label="Account">
-            <UserIcon />
-          </button>
-        </div>
         <a
           href="#join"
           className={styles.ctaBtn}

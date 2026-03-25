@@ -85,7 +85,7 @@
   background: var(--color-accent);
   color: var(--color-white);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -110,7 +110,7 @@
   display: none;
   width: 40px;
   height: 40px;
-  border: none;
+  border: transparent;
   background: transparent;
   border-radius: var(--radius-sm);
   place-items: center;
@@ -124,7 +124,7 @@
   gap: var(--space-sm);
   /* padding: var(--space-sm) var(--space-md) var(--space-md); */
   border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: var(--color-white);
   overflow: hidden;
   max-height: 0;
   transition:
