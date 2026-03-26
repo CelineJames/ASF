@@ -91,10 +91,10 @@ export default function Navbar() {
             Resources
           </a>
           <a href="#download" onClick={() => setMenuOpen(false)}>
-            Submit Documents
+            Review Documents
           </a>
           <a href="#review" onClick={() => setMenuOpen(false)}>
-            Submit
+            Submit Documents
           </a>
         </nav>
         <a

@@ -5,6 +5,13 @@ import review from "@/assets/icons/review.svg";
 import programs from "@/assets/icons/programs.svg";
 import guidiance from "@/assets/icons/guidiance.svg";
 import support from "@/assets/icons/support.svg";
+import { motion } from "framer-motion";
+import FadeIn from "../animations/fadeIn";
+
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations/staggerContainer";
 
 const features = [
   {
@@ -50,22 +57,37 @@ export default function WhySection() {
     <section id="why" className={styles.section}>
       <div className={`${styles.inner} container`}>
         <div className={styles.headings}>
-          <h2 className={styles.title}>Why Choose Achiever Scholars Forum?</h2>
-          <p className={styles.subtitle}>
-            We support students applying to graduate school with structured
-            mentorship and practical guidance for free
-          </p>
+          <FadeIn>
+            <h2 className={styles.title}>
+              Why Choose Achiever Scholars Forum?
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className={styles.subtitle}>
+              We support students applying to graduate school with structured
+              mentorship and practical guidance for free
+            </p>
+          </FadeIn>
         </div>
 
-        <div className={styles.grid}>
+        <StaggerContainer className={styles.grid}>
           {features.map((f, i) => (
-            <div className={styles.card} key={i}>
-              <img src={f.icon} alt="" className={styles.icon} />
-              <h3 className={styles.cardTitle}>{f.title}</h3>
-              <p className={styles.cardDesc}>{f.description}</p>
-            </div>
+            <StaggerItem key={i}>
+              <motion.div
+                className={styles.card}
+                whileHover={{
+                  y: -6,
+                  boxShadow: "0 12px 32px rgba(15,17,23,0.12)",
+                }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
+              >
+                <img src={f.icon} alt="" className={styles.icon} />
+                <h3 className={styles.cardTitle}>{f.title}</h3>
+                <p className={styles.cardDesc}>{f.description}</p>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
